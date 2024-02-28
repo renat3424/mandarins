@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title </title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+
+        <nav class="navbar navbar-dark bg-danger navbar-expand-md">
+            <div class="container">
+            <h1 class="navbar-brand">
+                    <a class="link-unstyled" asp-controller="Home" asp-action="Index">Мандарины</a>
+            </h1>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#theMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="theMenu" class="navbar-collapse collapse">
+                    <partial name="_LoginPartial" />
+            </div>
+            </div>
+        </nav>
+    </header>
+    <section class="container">
+        <h2 class="text-center"> @ViewBag.Title</h2>
+
+
+        @RenderBody()
+    </section>
+
+
+
+
+  
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/js/site.js"></script>
+
+    @RenderSection("Scripts", false)
+</body>
+</html>

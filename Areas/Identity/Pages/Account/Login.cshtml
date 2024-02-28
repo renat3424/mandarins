@@ -1,0 +1,52 @@
+﻿@page
+@using Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal;
+@model LoginModel
+@{
+    ViewBag.Title = "Войти";
+}
+
+
+<div class="row">
+
+    <div class="col-md-4 offset-md-4">
+
+
+        <form method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-group">
+
+                <label asp-for="Input.Email">Электронная почта</label>
+                <input asp-for="Input.Email" class="form-control" />
+                <span asp-validation-for="Input.Email" class="text-warning"></span>
+            </div>
+
+            <div class="form-group">
+
+                <label asp-for="Input.Password">Пароль</label>
+                <input asp-for="Input.Password" type="password" class="form-control" />
+                <span asp-validation-for="Input.Password" class="text-warning"></span>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input asp-for="Input.RememberMe" type="checkbox" class="form-check-input" />
+                    <label asp-for="Input.RememberMe" class="form-check-label">Запомнить меня?</label>
+                </div>
+                <span asp-validation-for="Input.RememberMe" class="text-warning"></span>
+            </div>
+
+            <div class="form-group">
+
+                <input type="submit" value="Войти" class="btn btn-success" />
+            </div>
+
+            <div class="form-group">
+
+                <p>
+                    <a class="text-black" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Зарегистрироваться</a>
+                </p>
+
+            </div>
+        </form>
+    </div>
+</div>
+

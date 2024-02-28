@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\mandarinProject1.props" />
+</Project>

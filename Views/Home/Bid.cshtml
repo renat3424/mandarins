@@ -1,0 +1,27 @@
+﻿@model BidViewModel
+@{
+    ViewBag.Title = "Сделать ставку";
+}
+
+
+<div class="row">
+
+    <div class="col-md-4 offset-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+        <div class="form-group">
+
+            <label asp-for="CurrentPrize">Введите стоимость</label>
+            <input asp-for="CurrentPrize" class="form-control" />
+            <span asp-validation-for="CurrentPrize" class="text-warning"></span>
+        </div>
+
+           @Html.HiddenFor(Model=> Model.Id)
+        <div class="form-group">
+
+            <input type="submit" value="Сделать ставку" class="btn btn-success" />
+        </div>
+        </form>>
+        </div>
+    </div>
+       
